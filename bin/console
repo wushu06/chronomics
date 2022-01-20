@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../SearchCommand.php';
+// Create the Application
+$application = new Symfony\Component\Console\Application;
+
+use App\Command\SearchCommand;
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+$application->add(new SearchCommand());
+// Run it
+$application->run();
